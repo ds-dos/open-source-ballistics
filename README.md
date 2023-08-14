@@ -2,11 +2,20 @@ An open-source ballisics calculator library. Mainly intended for calculating tra
 
 PACKAGE OVERVIEW:
 ballistics.guns.Gun - A gun that fires a projectile.
+
 ballistics.guns.SimpleGun - A gun that fires a projectile with a fixed energy.
+
 ballistics.mediums.Medium - A physical medium a projectile can travel through.
+
 ballistics.mediums.Solid - A solid medium with a material strength.
+
 ballistics.mediums.Fluid - A mon-compressible, viscous fluid medium.
+
 ballistics.mediums.Gas - A compressible, viscous gas medium.
+
 ballistics.projectiles.Projectile - A projectile that's launched and travels through the air.
+
 ballistics.projectiles.Sphere - A smooth sphere.
+
 ballistics.projectiles.GolfBall - A golf ball (dimpled sphere).
+
