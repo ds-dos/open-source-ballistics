@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ballistics"
+authors = [
+    {name = "dos-dos", email =  "stuff255@outlook.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+version = "0.1"
+dependencies = ["matplotlib"]
+
+# [tool.setuptools.packages.find]
+# where = ["ballistics"]
