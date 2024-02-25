@@ -18,5 +18,15 @@ def plot_bullet(projectile: Projectile, gun: Gun, medium: Medium, zero_dist: flo
     gun.aim(target_dist, target_height - height)
     gun.shoot(projectile)
     r = ranging.sim(projectile, medium, lambda r: r["drop"][-1] < -height, lambda _: False, .0001, x_label, *y_labels)
+
+    fig, ax = pyplot.subplots()
     for y_label, y_unit in tuple(zip(y_labels, y_units)):
-        pyplot.plot([x * x_unit for x in r[x_label]], [y * y_unit for y in r[y_label]], label = gun_name + " " + projectile_name + " " + y_label)
+        ax.set(xlabel=x_label, ylabel=y_label)
+        ax.plot(
+            [x * x_unit for x in r[x_label]],
+            [y * y_unit for y in r[y_label]],
+            label=gun_name + " " + projectile_name + " " + y_label,
+        )
+
+    return fig
+
